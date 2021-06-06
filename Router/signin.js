@@ -28,12 +28,13 @@ router.post('/signin',async(req,res)=>
         expires:new Date(Date.now()+25892000000),
         httpOnly:true
       });
+    
       if(!isMatch)
       {
       res.status(400).json({message:"Invalid Credientials"});
       }
       else{
-      res.status(200).json({message:"welcome "+id.firstName});    
+      res.status(200).json({message:id});    
       } 
     }
     else{

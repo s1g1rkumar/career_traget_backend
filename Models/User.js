@@ -9,6 +9,15 @@ const userSchema = new mongoose.Schema({
   lastName: {
     type: String,
   },
+  profession: {
+    type: String,
+  },
+  bio: {
+    type: String,
+  },
+  id:{
+    type:String,
+  },
   email: {
     type: String,
     required: true
@@ -21,15 +30,14 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  // cPassword: {
-  //   type: String,
-  //   required: true
-  // },
+  image:{
+
+  },
   tokens:[
     {
       token:{
         type:String,
-        required:true
+        // required:true
       }
     }
   ]

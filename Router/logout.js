@@ -5,10 +5,11 @@ const authenticate=require('../Middleware/authenticate');
 require('../DB/connection');
 
 
-router.get('/profile',authenticate,(req,res)=>
+router.get('/logout',(req,res)=>
 {
-  console.log('hello from profile section');
-  res.status(200).send(req.rootUser);
+  console.log('hello from logout section');
+  res.clearCookie('jwtToken',{path:'/'});
+  res.status(200).send('user logout');
   //res.send({'result':'token matched'})
 })
 

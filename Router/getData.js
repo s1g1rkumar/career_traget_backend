@@ -5,9 +5,9 @@ const authenticate=require('../Middleware/authenticate');
 require('../DB/connection');
 
 
-router.get('/profile',authenticate,(req,res)=>
+router.get('/getData',authenticate,(req,res)=>
 {
-  console.log('hello from profile section');
+  console.log('hello from getData section');
   res.status(200).send(req.rootUser);
   //res.send({'result':'token matched'})
 })

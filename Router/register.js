@@ -20,12 +20,15 @@ router.post('/register',async(req,res)=>
     }
 
     try{
+      var str = email;
+      var array = str.split("@");
+      var id=array[0];
      const userExist = await  User.findOne({email:email});
      if(userExist)
         {
           return res.status(422).json({error:'user already exist'})
         }
-        const user=new User({email,phone,password});
+        const user=new User({email,phone,password,id});
         
         const userReg = await user.save();
         if(userReg)
