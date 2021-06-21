@@ -13,7 +13,8 @@ app.use(require('./Router/profile'));
 app.use(require('./Router/getData'));
 app.use(require('./Router/editProfile'));
 app.use(require('./Router/logout'));
-app.use(require('./Router/compiler'));
+app.use(require('./Router/subscribe'));
+app.use(require('./Router/alogin'));
 
 
 
