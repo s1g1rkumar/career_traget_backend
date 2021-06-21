@@ -15,6 +15,7 @@ app.use(require('./Router/editProfile'));
 app.use(require('./Router/logout'));
 app.use(require('./Router/subscribe'));
 app.use(require('./Router/alogin'));
+app.use(require('./Router/glogin'));
 
 
 
