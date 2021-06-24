@@ -3,13 +3,6 @@ const router=express.Router();
 require('../DB/connection');
 const User=require('../Models/User');
 
-router.get('/',(req,res)=>{
-  res.send('hello from router home');
-});
-
-
-
-
 //---using sync await-----
 router.post('/register',async(req,res)=>
 {

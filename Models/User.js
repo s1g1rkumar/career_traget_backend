@@ -12,6 +12,9 @@ const userSchema = new mongoose.Schema({
   profession: {
     type: String,
   },
+  fullname:{
+    type:String,
+  },
   bio: {
     type: String,
   },
@@ -29,9 +32,6 @@ const userSchema = new mongoose.Schema({
   password: {
     type: String,
     
-  },
-  image:{
-
   },
   tokens:[
     {

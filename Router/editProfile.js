@@ -7,6 +7,7 @@ const User=require('../Models/User');
 router.post('/editProfile',async(req,res)=>
 {
   const {firstName,lastName,profession,bio,email,_id} = req.body;
+  let fullname=firstName+" "+lastName;
     if(!firstName || !lastName || !profession || !bio )
     {
       return res.status(423).json({error:"plz fill all field properly"})
@@ -14,7 +15,7 @@ router.post('/editProfile',async(req,res)=>
 
     // console.log("my image ",image);
     try{
-      var data={firstName,lastName,profession,bio};
+      var data={firstName,lastName,fullname,profession,bio};
      const userExist = await  User.findOne({email:email});
      if(userExist)  
      {

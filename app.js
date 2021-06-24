@@ -16,13 +16,7 @@ app.use(require('./Router/logout'));
 app.use(require('./Router/subscribe'));
 app.use(require('./Router/glogin'));
 
-
-
 const PORT=process.env.PORT;
-
-
-
-
 
 app.get('/',(req,res)=>{
   res.send('hello from app home');
